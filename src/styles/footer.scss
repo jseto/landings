@@ -1,0 +1,36 @@
+footer.footer {
+	padding: 3rem 0rem 0rem;
+	
+	.menu {
+		font-size: 1em;
+	}
+
+	.logo {
+		text-align: center;
+		margin-bottom: 2em;
+	}
+
+	.menu-list {
+		.navbar-item {
+			line-height: $menu-list-line-height;
+			min-height: 2em;
+		}
+	}
+
+	.social {
+		text-align: right;
+		padding-right: 3em;
+		
+		svg {
+			margin: 0.5em;
+			width: 2em;
+			fill: $white;
+		}
+	}
+
+	.made-with-love {
+		text-align: center;
+		color: gray;
+		padding: 0.5em;
+	}
+}

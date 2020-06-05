@@ -1,0 +1,114 @@
+@charset "utf-8";
+@import "constants";
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,200,300,500,700,900&display=swap');
+
+@import "~bulma/bulma.sass";  // cSpell: disable-line
+
+body {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* purgecss start ignore */
+
+main {
+  margin: 2em;
+}
+
+.content {
+
+  h1 {
+    text-align: center;
+    color: $main-color;
+    font-size: 3.25rem;
+    margin: 0.5em 0 0.425em;
+	}
+	
+	h2 {
+    text-align: center;
+    color: $main-color;
+    font-size: 2.5rem;
+    margin-bottom: 1em;
+    margin-top: 2em;
+	}
+
+	h3 {
+    color: $main-color;
+		text-align: center;
+	}
+  
+  @media screen and ( max-width: $tablet - 1px ) {
+		h1 {
+			font-size: 2.5rem;
+		}
+
+		h2 {
+      font-size: 1.7rem;
+      margin-top: 1em;
+		}
+
+		h3 {
+			font-size: 1.5rem;
+		}
+
+		p {
+			font-size: 1em;
+		}
+		
+	}
+}
+
+.error {
+  overflow:hidden;
+  transition:max-height 0.3s ease-out; 
+  max-height: 7em;
+  color: red;
+  text-align: center;
+
+  &.shrink-to-hide {
+    max-height: 0;
+  }
+
+  p {
+    border-radius: 1em;
+    background-color: $white;
+    margin-top: 1em;
+    padding: 0.25em;
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% {  transform: rotate(359deg); }
+}
+
+.spin {
+  animation: spin 2s linear infinite;
+  fill: grey;
+  width: 25vw;
+  margin-left: auto;
+  margin-right: auto;
+
+  &.modal {
+    display: flex;
+    align-items: center;
+    @media screen and ( max-height: 600px ) {
+      align-items: flex-start;
+    }
+    justify-content: center;
+    position: fixed;
+    z-index: 500;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    right:0;
+    bottom: 0;
+  }
+}
+
+%inner-content {
+  max-width: $desktop;
+  margin-left: auto;
+  margin-right: auto;
+}
+

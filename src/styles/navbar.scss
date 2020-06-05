@@ -1,0 +1,20 @@
+.navbar {
+
+	@media screen and (max-width: $desktop - 1 ) {
+		.is-active {
+			background-image: linear-gradient(#363636, #585858);
+			
+		}
+		
+		.navbar-burger {
+			background-image: unset;
+		}
+	
+		.navbar-item {
+			color: $white-ter;
+			&:hover {
+				color: black;
+			}
+		}
+	}
+}
